@@ -35,6 +35,9 @@ let SubMenu = React.createClass({
     },
     handleClick(e) {
         e.preventDefault();
+        if(typeof this.props.handleClick === "function") {
+          this.props.handleClick();
+        }
     },
     handleMouseEnter() {
         if (this.closetimer) clearTimeout(this.closetimer);
