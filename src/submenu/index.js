@@ -1,6 +1,7 @@
 import React from "react";
 import classnames from "classnames";
-
+import assign from "object-assign";
+import monitor from "../monitor";
 import MenuWrapper from "./wrapper";
 
 const menuStyles = {
@@ -33,11 +34,25 @@ let SubMenu = React.createClass({
 
         if (this.closetimer) clearTimeout(this.closetimer);
     },
-    handleClick(e) {
-        e.preventDefault();
-        if(typeof this.props.handleClick === "function") {
-          this.props.handleClick();
+    handleClick(event) {
+
+        const { disabled, onClick, data, preventClose } = this.props;
+
+        event.preventDefault();
+
+        if (disabled) return;
+
+        var newData = {}
+        assign(newData, data, monitor.getItem());
+
+        if (typeof onClick === "function") {
+            onClick(event, newData);
         }
+
+        if (preventClose) return;
+
+        monitor.hideMenu();
+
     },
     handleMouseEnter() {
         if (this.closetimer) clearTimeout(this.closetimer);

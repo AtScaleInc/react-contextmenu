@@ -34,6 +34,7 @@ let ContextMenuWrapper = React.createClass({
             const wrapper = window.requestAnimationFrame || setTimeout;
 
             wrapper(() => {
+                if(!this.menu) return null;
                 this.setState(this.getMenuPosition(nextProps.x, nextProps.y));
                 this.menu.parentNode.addEventListener("contextmenu", this.hideMenu);
             });
