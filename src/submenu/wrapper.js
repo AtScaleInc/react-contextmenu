@@ -18,6 +18,7 @@ const SubMenuWrapper = React.createClass({
             const wrapper = window.requestAnimationFrame || setTimeout;
 
             wrapper(() => {
+                if(!this.menu) return null;
                 this.setState(this.getMenuPosition());
                 this.forceUpdate();
             });
