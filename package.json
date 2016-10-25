@@ -1,6 +1,6 @@
 {
   "name": "@atscale/react-contextmenu",
-  "version": "1.6.5",
+  "version": "1.6.6",
   "description": "Context Menu implemented in React",
   "main": "modules/index.js",
   "keywords": [
