@@ -1,5 +1,5 @@
 {
-  "name": "react-contextmenu",
+  "name": "@atscale/react-contextmenu",
   "version": "2.8.0",
   "description": "Context Menu implemented in React",
   "main": "modules/index.js",
@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "lint": "eslint ./src ./examples",
-    "test": "npm run lint && npm run test:only",
+    "test": "npm run test:only",
     "test:only": "jest --no-cache --verbose --coverage",
     "test:dev": "jest --watchAll --no-cache --verbose --coverage",
     "clean": "rimraf ./dist && rimraf ./modules && rimraf ./es6",
