@@ -123,3 +123,7 @@ For Changelog, see [releases](https://github.com/vkbansal/react-contextmenu/rele
 
 [climate-url]: https://codeclimate.com/github/vkbansal/react-contextmenu
 [climate-image]: http://img.shields.io/codeclimate/github/vkbansal/react-contextmenu.svg?style=flat-square
+
+## Publish as npm package
+
+Publish is done on every push to master by this Jenkins job: `Npm-publish-react-contextmenu`.
